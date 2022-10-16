@@ -15,8 +15,20 @@
 </head>
 <body <?php body_class() ?>>
 
-    <h1 class='dear__header'>Hello world</h1>
-    <p>hello world</p>
+    <div id="header_area">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <a href="">
+                        <!-- static image -->
+                        <!-- <img class='w-100' src='<?php echo get_template_directory_uri(  ) ?>/img/logo.png' alt="">  -->
+                        <!-- dynamic Image -->
+                        <img class='w-100' src='<?php echo get_theme_mod('dear__header__logo') ?>' alt=""> 
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
     <?php wp_footer() ?>
 </body>
 </html>

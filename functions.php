@@ -20,4 +20,24 @@
 
     add_action('wp_enqueue_scripts', 'dear__css__and__js__file__calling');
 // Theme css and jquery file calling end
+function dear__customize__register ($wp_customize){
+    $wp_customize->add_section('dear__header__area', array(
+        'title'=>__('Header Area', 'dearvayu'), // header area name and text domain
+        'description'=> 'If you update your  header area update here'
+    ));
+
+    $wp_customize->add_setting('dear__header__logo', array(
+        'default'=> get_bloginfo('template_directory') . '/img/dear.png'
+    ));
+    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'dear__header__logo',array(
+        'label' => 'Logo Upload',
+        'description' => 'If you interested to change you logo upload a logo here',
+        'setting' => 'dear__header__logo',
+        'section' => 'dear__header__area'
+    )) );
+};
+
+// Theme function add start
+// Theme function add end
+add_action('customize_register','dear__customize__register');
 ?>

@@ -14,8 +14,9 @@
     <?php wp_head() ?>
 </head>
 <body <?php body_class() ?>>
-    
 
+    <h1 class='dear__header'>Hello world</h1>
+    <p>hello world</p>
     <?php wp_footer() ?>
 </body>
 </html>
